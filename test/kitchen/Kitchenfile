@@ -1,5 +1,4 @@
 cookbook "nginx" do
-  configuration "ohai_plugin"
   configuration "default"
   configuration "source"
   configuration "upstream_repo"

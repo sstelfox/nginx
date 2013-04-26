@@ -16,8 +16,6 @@ end
   depends cb
 end
 
-depends 'ohai', '>= 1.1.4'
-
 %w{ bluepill }.each do |cb|
   recommends cb
 end
