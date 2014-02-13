@@ -64,6 +64,12 @@ http {
   client_max_body_size <%= node['nginx']['client_max_body_size'] %>;
   <% end -%>
 
+  server_tokens off;
+  server_name_in_redirect off;
+  client_body_timeout 10;
+  client_header_timeout 10;
+  send_timeout 10;
+
   include <%= node['nginx']['dir'] %>/conf.d/*.conf;
   include <%= node['nginx']['dir'] %>/sites-enabled/*;
 }
